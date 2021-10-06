@@ -1,10 +1,10 @@
-const http = require('http');
-const url = require('url');
+const express = require('express')
+const app = express()
 
-const server = http.createServer((request, response) => {
+app.get('/', function(req, res) {
+    res.json({
+        message: "Hi World",
+    });
+})
 
-});
-
-server.listen(3000, () => {
-    console.log('Server is running!');
-});
+app.listen(3000)
